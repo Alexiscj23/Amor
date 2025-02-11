@@ -293,8 +293,7 @@
           piece.className = 'puzzle-piece';
           piece.draggable = true;
           piece.dataset.index = index;
-          piece.style.backgroundImage = "url('
-         https://raw.githubusercontent.com/Alexiscj23/San-valentines/refs/heads/main/IMG_20190812_212839.jpg  ')";
+          piece.style.backgroundImage = "url('https://github.com/tuusuario/tu-repositorio/raw/main/rompecabezas.jpg')";
           piece.style.backgroundSize = `${cols * pieceWidth}px ${rows * pieceHeight}px`;
           piece.style.backgroundPosition = `-${c * pieceWidth}px -${r * pieceHeight}px`;
           piece.addEventListener('dragstart', dragStart);
