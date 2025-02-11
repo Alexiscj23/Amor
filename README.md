@@ -107,7 +107,8 @@
       height: 100px;
       border: 1px solid #b30000;
       cursor: grab;
-      background-image: url('https://github.com/tuusuario/tu-repositorio/raw/main/rompecabezas.jpg');
+      background-image: url('
+      https://raw.githubusercontent.com/Alexiscj23/San-valentines/refs/heads/main/IMG_20190812_212839.jpg  ');
       background-size: 300px 300px;
     }
     /* Pantalla 4: Libro (Slider) con 5 páginas */
