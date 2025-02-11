@@ -202,7 +202,7 @@
       <div class="slides">
         <!-- Cada slide representa una página del libro -->
         <div class="slide">
-          <img src="https://github.com/tuusuario/tu-repositorio/raw/main/foto1.jpg" alt="Foto 1">
+          <img src="https://raw.githubusercontent.com/Alexiscj23/San-valentines/refs/heads/main/IMG-20241215-WA0032.jpg" alt="Foto 1">
           <div class="caption">Frase de amor 1</div>
         </div>
         <div class="slide">
