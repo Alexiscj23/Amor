@@ -2,10 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>San Valentín Especial</title>
   <style>
-    /* General: cada "pantalla" ocupa toda la ventana */
     .screen {
       display: none;
       width: 100vw;
@@ -14,9 +12,9 @@
       top: 0;
       left: 0;
     }
-    /* Pantalla 1: Pregunta inicial con fondo temático y osito */
+    /* Pantalla 1: Pregunta inicial */
     #screen1 {
-      display: block;
+      display: block; /* Visible por defecto */
       background: url('https://images.pexels.com/photos/3755765/pexels-photo-3755765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center;
       background-size: cover;
       text-align: center;
@@ -45,10 +43,46 @@
       background-color: #888;
       color: white;
     }
-    #screen1 .teddy {
-      margin-top: 20px;
-      width: 150px;
+  </style>
+</head>
+<body>
+  <!-- Pantalla 1: Pregunta inicial -->
+  <div id="screen1" class="screen">
+    <div class="question">¿Quieres ser mi San Valentín?</div>
+    <div class="buttons">
+      <button id="si" onclick="goToScreen2()">Sí</button>
+      <button id="no" onclick="alert('Oh, qué pena!')">No</button>
+    </div>
+    <!-- Osito amoroso -->
+    <img class="teddy" src="https://media.giphy.com/media/10LKovKon8DENq/giphy.gif" alt="Osito amoroso" style="margin-top:20px; width:150px;">
+  </div>
+
+  <!-- Pantalla 2: Gatito y frases (solo ejemplo) -->
+  <div id="screen2" class="screen">
+    <h1>¡Gracias, mi amor!</h1>
+    <img class="kitten" src="https://media.giphy.com/media/9o6wJbQ0Vb5U0/giphy.gif" alt="Gatito dando besos" style="width:200px;">
+    <p>"Cada beso tuyo es un regalo."</p>
+    <!-- Aquí se generarían los corazones flotantes -->
+  </div>
+
+  <script>
+    // Función para ocultar todas las pantallas y mostrar la indicada
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(function(screen) {
+        screen.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
     }
+    // Función que se llama al presionar "Sí"
+    function goToScreen2() {
+      showScreen('screen2');
+      // Aquí puedes llamar a la función que inicie la animación de los corazones, por ejemplo:
+      // startFloatingHearts();
+    }
+  </script>
+</body>
+</html>
+
     /* Pantalla 2: Gatito, frases de amor y corazones flotantes */
     #screen2 {
       background: #ffe6e6;
