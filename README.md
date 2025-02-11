@@ -43,9 +43,7 @@
       background-color: #888;
       color: white;
     }
-  </style>
-</head>
-<body>
+  
   <!-- Pantalla 1: Pregunta inicial -->
   <div id="screen1" class="screen">
     <div class="question">¿Quieres ser mi San Valentín?</div>
