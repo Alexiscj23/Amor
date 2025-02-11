@@ -111,8 +111,7 @@
       border: 1px solid #b30000;
       cursor: grab;
       /* La imagen se divide en 9 piezas de 300x300 total */
-      background-image: url('
-      https://raw.githubusercontent.com/Alexiscj23/San-valentines/refs/heads/main/IMG_20190812_212839.jpg  ');
+      background-image: url('https://github.com/tuusuario/tu-repositorio/raw/main/rompecabezas.jpg');
       background-size: 300px 300px;
     }
     /* Pantalla 4: Libro interactivo (Slider) */
@@ -294,8 +293,8 @@
           piece.className = 'puzzle-piece';
           piece.draggable = true;
           piece.dataset.index = index;
-          piece.style.backgroundImage = "
-         ('https://raw.githubusercontent.com/Alexiscj23/San-valentines/refs/heads/main/IMG_20190812_212839.jpg   ')";
+          piece.style.backgroundImage = "url('
+         https://raw.githubusercontent.com/Alexiscj23/San-valentines/refs/heads/main/IMG_20190812_212839.jpg  ')";
           piece.style.backgroundSize = `${cols * pieceWidth}px ${rows * pieceHeight}px`;
           piece.style.backgroundPosition = `-${c * pieceWidth}px -${r * pieceHeight}px`;
           piece.addEventListener('dragstart', dragStart);
