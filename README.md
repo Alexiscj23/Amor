@@ -2,8 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>San Valentín Especial</title>
   <style>
+    /* Cada "pantalla" ocupa toda la ventana */
     .screen {
       display: none;
       width: 100vw;
@@ -14,7 +16,7 @@
     }
     /* Pantalla 1: Pregunta inicial */
     #screen1 {
-      display: block; /* Visible por defecto */
+      display: block; /* Visible inicialmente */
       background: url('https://images.pexels.com/photos/3755765/pexels-photo-3755765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center;
       background-size: cover;
       text-align: center;
@@ -26,11 +28,13 @@
     }
     #screen1 .buttons {
       margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 50px; /* Mayor separación entre botones */
     }
     #screen1 button {
       font-size: 24px;
       padding: 10px 20px;
-      margin: 10px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
@@ -43,45 +47,11 @@
       background-color: #888;
       color: white;
     }
-  
-  <!-- Pantalla 1: Pregunta inicial -->
-  <div id="screen1" class="screen">
-    <div class="question">¿Quieres ser mi San Valentín?</div>
-    <div class="buttons">
-      <button id="si" onclick="goToScreen2()">Sí</button>
-      <button id="no" onclick="alert('Oh, qué pena!')">No</button>
-    </div>
-    <!-- Osito amoroso -->
-    <img class="teddy" src="https://media.giphy.com/media/10LKovKon8DENq/giphy.gif" alt="Osito amoroso" style="margin-top:20px; width:150px;">
-  </div>
-
-  <!-- Pantalla 2: Gatito y frases (solo ejemplo) -->
-  <div id="screen2" class="screen">
-    <h1>¡Gracias, mi amor!</h1>
-    <img class="kitten" src="https://media.giphy.com/media/9o6wJbQ0Vb5U0/giphy.gif" alt="Gatito dando besos" style="width:200px;">
-    <p>"Cada beso tuyo es un regalo."</p>
-    <!-- Aquí se generarían los corazones flotantes -->
-  </div>
-
-  <script>
-    // Función para ocultar todas las pantallas y mostrar la indicada
-    function showScreen(id) {
-      document.querySelectorAll('.screen').forEach(function(screen) {
-        screen.style.display = 'none';
-      });
-      document.getElementById(id).style.display = 'block';
+    #screen1 .teddy {
+      margin-top: 20px;
+      width: 150px;
     }
-    // Función que se llama al presionar "Sí"
-    function goToScreen2() {
-      showScreen('screen2');
-      // Aquí puedes llamar a la función que inicie la animación de los corazones, por ejemplo:
-      // startFloatingHearts();
-    }
-  </script>
-</body>
-</html>
-
-    /* Pantalla 2: Gatito, frases de amor y corazones flotantes */
+    /* Pantalla 2: Gatito, frases y corazones */
     #screen2 {
       background: #ffe6e6;
       text-align: center;
@@ -95,7 +65,7 @@
       font-size: 24px;
       margin: 20px;
     }
-    /* Los corazones flotantes se generan dinámicamente */
+    /* Corazones flotantes */
     .heart {
       position: absolute;
       font-size: 24px;
@@ -120,6 +90,7 @@
       height: 310px;
       border: 2px solid #b30000;
       padding: 5px;
+      background-color: #fff;
     }
     .puzzle-cell {
       width: 100px;
@@ -139,11 +110,12 @@
       height: 100px;
       border: 1px solid #b30000;
       cursor: grab;
+      /* La imagen se divide en 9 piezas de 300x300 total */
       background-image: url('
       https://raw.githubusercontent.com/Alexiscj23/San-valentines/refs/heads/main/IMG_20190812_212839.jpg  ');
       background-size: 300px 300px;
     }
-    /* Pantalla 4: Libro (Slider) con 5 páginas */
+    /* Pantalla 4: Libro interactivo (Slider) */
     #screen4 {
       background: #ffe6e6;
       text-align: center;
@@ -193,23 +165,22 @@
   </style>
 </head>
 <body>
-  <!-- Pantalla 1: Pregunta inicial -->
+  <!-- Pantalla 1: Pregunta Inicial -->
   <div id="screen1" class="screen">
     <div class="question">¿Quieres ser mi San Valentín?</div>
     <div class="buttons">
       <button id="si" onclick="goToScreen2()">Sí</button>
       <button id="no" onclick="alert('Oh, qué pena!')">No</button>
     </div>
-    <!-- Imagen de osito amoroso -->
-    <img class="teddy" src="https://media.giphy.com/media/10LKovKon8DENq/giphy.gif" alt="Teddy amoroso">
+    <img class="teddy" src="https://media.giphy.com/media/10LKovKon8DENq/giphy.gif" alt="Osito amoroso">
   </div>
 
-  <!-- Pantalla 2: Gatito dando besos y frases de amor con corazones flotantes -->
+  <!-- Pantalla 2: Gatito, Frases y Corazones -->
   <div id="screen2" class="screen">
-    <img class="kitten" src="https://media.giphy.com/media/9o6wJbQ0Vb5U0/giphy.gif" alt="Kitten dando besos">
+    <img class="kitten" src="https://media.giphy.com/media/9o6wJbQ0Vb5U0/giphy.gif" alt="Gatito dando besos">
     <div class="love-phrases">
-      "Tu amor me llena de alegría" <br>
-      "Eres mi sol en los días grises" <br>
+      "Tu amor me llena de alegría"<br>
+      "Eres mi sol en los días grises"<br>
       "Cada beso tuyo es un regalo"
     </div>
     <button onclick="goToScreen3()" style="font-size:24px; padding:10px 20px; border:none; border-radius:10px; background-color:#ff4d4d; color:white; cursor:pointer;">Continuar</button>
@@ -225,12 +196,12 @@
     <button onclick="checkPuzzle()" style="font-size:24px; padding:10px 20px; border:none; border-radius:10px; background-color:#ff4d4d; color:white; cursor:pointer;">Verificar rompecabezas</button>
   </div>
 
-  <!-- Pantalla 4: Libro interactivo (Slider) -->
+  <!-- Pantalla 4: Libro Interactivo (Slider) -->
   <div id="screen4" class="screen">
     <h2>Recuerdos de Amor</h2>
     <div class="slider">
       <div class="slides">
-        <!-- Cada slide corresponde a una página del libro (5 en total) -->
+        <!-- Cada slide representa una página del libro -->
         <div class="slide">
           <img src="https://github.com/tuusuario/tu-repositorio/raw/main/foto1.jpg" alt="Foto 1">
           <div class="caption">Frase de amor 1</div>
@@ -259,45 +230,46 @@
     </div>
   </div>
 
+  <!-- JavaScript -->
   <script>
-    // Función para mostrar una pantalla y ocultar las demás
+    /* Función para mostrar la pantalla deseada y ocultar las demás */
     function showScreen(id) {
-      document.querySelectorAll('.screen').forEach(screen => {
+      document.querySelectorAll('.screen').forEach(function(screen) {
         screen.style.display = 'none';
       });
       document.getElementById(id).style.display = 'block';
     }
-    // Navegar a la Pantalla 2 (gatito)
+    // Navegar de pantalla 1 a 2
     function goToScreen2() {
       showScreen('screen2');
       startFloatingHearts();
     }
-    // Navegar a la Pantalla 3 (rompecabezas)
+    // Navegar de pantalla 2 a 3
     function goToScreen3() {
       showScreen('screen3');
       setupPuzzle();
     }
-    // Navegar a la Pantalla 4 (libro/slider)
+    // Navegar de pantalla 3 a 4
     function goToScreen4() {
       showScreen('screen4');
     }
-
-    // Función para iniciar los corazones flotantes en Screen2
+    
+    /* Función para generar corazones flotantes en la pantalla 2 */
     function startFloatingHearts() {
-      setInterval(() => {
-        const heart = document.createElement('div');
+      setInterval(function() {
+        let heart = document.createElement('div');
         heart.className = 'heart';
         heart.style.left = Math.random() * 100 + 'vw';
-        heart.textContent = '❤️';
         heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        heart.textContent = '❤️';
         document.body.appendChild(heart);
-        setTimeout(() => { heart.remove(); }, 5000);
+        setTimeout(function() { heart.remove(); }, 5000);
       }, 500);
     }
-
-    /* ====================
-       ROMPECABEZAS (Screen 3)
-       ==================== */
+    
+    /* ========================
+       ROMPECABEZAS (Pantalla 3)
+       ======================== */
     const rows = 3, cols = 3, pieceWidth = 100, pieceHeight = 100;
     function setupPuzzle() {
       const board = document.getElementById('puzzle-board');
@@ -305,7 +277,7 @@
       board.innerHTML = '';
       piecesContainer.innerHTML = '';
       let pieces = [];
-      // Crear celdas en el tablero
+      // Crear celdas del tablero
       for (let i = 0; i < rows * cols; i++) {
         let cell = document.createElement('div');
         cell.className = 'puzzle-cell';
@@ -314,7 +286,7 @@
         cell.addEventListener('drop', drop);
         board.appendChild(cell);
       }
-      // Crear piezas del rompecabezas
+      // Crear las piezas del rompecabezas
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
           let index = r * cols + c;
@@ -322,8 +294,7 @@
           piece.className = 'puzzle-piece';
           piece.draggable = true;
           piece.dataset.index = index;
-          piece.style.backgroundImage = "url('https://raw.githubusercontent.com/Alexiscj23/San-valentines/refs/heads/main/IMG_20190812_212839.jpg
-            ')";
+          piece.style.backgroundImage = "url('https://github.com/tuusuario/tu-repositorio/raw/main/rompecabezas.jpg')";
           piece.style.backgroundSize = `${cols * pieceWidth}px ${rows * pieceHeight}px`;
           piece.style.backgroundPosition = `-${c * pieceWidth}px -${r * pieceHeight}px`;
           piece.addEventListener('dragstart', dragStart);
@@ -331,7 +302,6 @@
           pieces.push(piece);
         }
       }
-      // Mezclar piezas
       pieces = shuffleArray(pieces);
       pieces.forEach(piece => piecesContainer.appendChild(piece));
     }
@@ -363,27 +333,28 @@
     }
     function checkPuzzle() {
       let correct = 0;
-      document.querySelectorAll('.puzzle-cell').forEach(cell => {
+      document.querySelectorAll('.puzzle-cell').forEach(function(cell) {
         if (cell.children.length > 0 && cell.children[0].dataset.index === cell.dataset.index)
           correct++;
       });
+      const msg = document.getElementById('puzzle-message');
       if (correct === rows * cols) {
-        document.getElementById('puzzle-message').textContent = "¡Rompecabezas armado perfectamente!";
+        msg.textContent = "¡Rompecabezas armado perfectamente!";
         setTimeout(goToScreen4, 2000);
       } else {
-        document.getElementById('puzzle-message').textContent = `Faltan ${rows * cols - correct} piezas correctas.`;
+        msg.textContent = `Faltan ${rows * cols - correct} piezas correctas.`;
       }
     }
-
-    /* ====================
-       SLIDER (Screen 4)
-       ==================== */
+    
+    /* ========================
+       SLIDER (Pantalla 4)
+       ======================== */
     let currentSlide = 0;
     function showSlide(index) {
       const slidesContainer = document.querySelector('.slides');
       const totalSlides = slidesContainer.children.length;
-      if(index < 0) currentSlide = totalSlides - 1;
-      else if(index >= totalSlides) currentSlide = 0;
+      if (index < 0) currentSlide = totalSlides - 1;
+      else if (index >= totalSlides) currentSlide = 0;
       else currentSlide = index;
       slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
