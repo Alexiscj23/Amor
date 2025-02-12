@@ -169,14 +169,14 @@
     <div class="question">¿Quieres ser mi San Valentín?</div>
     <div class="buttons">
       <button id="si" onclick="goToScreen2()">Sí</button>
-      <button id="no" onclick="alert('Oh, qué pena!')">No</button>
+      <button id="no" onclick="alert('Oh, qué pena!pero un no, no es posible')">No</button>
     </div>
     <img class="teddy" src="https://media.giphy.com/media/10LKovKon8DENq/giphy.gif" alt="Osito amoroso">
   </div>
 
   <!-- Pantalla 2: Gatito, Frases y Corazones -->
   <div id="screen2" class="screen">
-    <img class="kitten" src="https://media.giphy.com/media/9o6wJbQ0Vb5U0/giphy.gif" alt="Gatito dando besos">
+    <img class="kitten" src="https://i.pinimg.com/originals/d9/11/a6/d911a60fbaef775210de355e75b10c25.gif" alt="Gatito dando besos">
     <div class="love-phrases">
       "Tu amor me llena de alegría"<br>
       "Eres mi sol en los días grises"<br>
