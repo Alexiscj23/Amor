@@ -206,19 +206,22 @@
           <div class="caption">Frase de amor 1</div>
         </div>
         <div class="slide">
-          <img src="https://github.com/tuusuario/tu-repositorio/raw/main/foto2.jpg" alt="Foto 2">
+          <img src="https://raw.githubusercontent.com/Alexiscj23/Amor/refs/heads/main/IMG-20250104-WA0053.jpg  " alt="Foto 2">
           <div class="caption">Frase de amor 2</div>
         </div>
         <div class="slide">
-          <img src="https://github.com/tuusuario/tu-repositorio/raw/main/foto3.jpg" alt="Foto 3">
+          <img src="https://raw.githubusercontent.com/Alexiscj23/Amor/refs/heads/main/IMG20241027184208_065344.jpg
+            " alt="Foto 3">
           <div class="caption">Frase de amor 3</div>
         </div>
         <div class="slide">
-          <img src="https://github.com/tuusuario/tu-repositorio/raw/main/foto4.jpg" alt="Foto 4">
+          <img src="https://raw.githubusercontent.com/Alexiscj23/Amor/refs/heads/main/IMG_20241026_173212.jpg
+            " alt="Foto 4">
           <div class="caption">Frase de amor 4</div>
         </div>
         <div class="slide">
-          <img src="https://github.com/tuusuario/tu-repositorio/raw/main/foto5.jpg" alt="Foto 5">
+          <img src="https://raw.githubusercontent.com/Alexiscj23/Amor/refs/heads/main/IMG_20241115_214336.jpg
+            " alt="Foto 5">
           <div class="caption">Frase de amor 5</div>
         </div>
       </div>
