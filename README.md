@@ -220,7 +220,7 @@
           <div class="caption">Frase de amor 4</div>
         </div>
         <div class="slide">
-          <img src="https://raw.githubusercontent.com/Alexiscj23/Amor/refs/heads/main/IMG_20241115_214336.jpg
+          <img src="https://github.com/Alexiscj23/Amor/blob/main/HnVideoEditor_2025_02_12_002354556.mp4
             " alt="Foto 5">
           <div class="caption">Frase de amor 5</div>
         </div>
